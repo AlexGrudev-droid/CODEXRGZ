@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Система записи мастера услуг</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Система управления расписанием мастера</h1>
+    <p>Календарь, история клиентов и контроль свободных окон</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Календарь записи</h2>
+      <div class="calendar">
+        <div class="slot busy">
+          <span>09:00</span>
+          <strong>Анна Смирнова</strong>
+          <small>Маникюр</small>
+        </div>
+
+        <div class="slot free">
+          <span>11:00</span>
+          <strong>Свободно</strong>
+          <button>Записать</button>
+        </div>
+
+        <div class="slot busy">
+          <span>13:00</span>
+          <strong>Ирина Коваль</strong>
+          <small>Окрашивание</small>
+        </div>
+
+        <div class="slot free">
+          <span>15:00</span>
+          <strong>Свободно</strong>
+          <button>Записать</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>История клиентов</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Клиент</th>
+            <th>Услуга</th>
+            <th>Дата</th>
+          </tr>
+        </thead>
+        <tbody id="clientTable"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Заметки по визитам</h2>
+      <textarea placeholder="Введите заметки по клиенту..."></textarea>
+      <button class="save-btn">Сохранить</button>
+    </section>
+
+    <section class="card">
+      <h2>Свободные окна</h2>
+      <ul id="freeSlots"></ul>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
